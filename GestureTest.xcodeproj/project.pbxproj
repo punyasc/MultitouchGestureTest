@@ -15,6 +15,7 @@
 		B528701F202A587200E78FB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B528701E202A587200E78FB2 /* main.m */; };
 		B5287029202A587200E78FB2 /* GestureTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5287028202A587200E78FB2 /* GestureTestTests.m */; };
 		B5287034202A587200E78FB2 /* GestureTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5287033202A587200E78FB2 /* GestureTestUITests.m */; };
+		B5287043202A5C6700E78FB2 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5287042202A5C6700E78FB2 /* RoundedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		B528702F202A587200E78FB2 /* GestureTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5287033202A587200E78FB2 /* GestureTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureTestUITests.m; sourceTree = "<group>"; };
 		B5287035202A587200E78FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5287041202A5C6700E78FB2 /* RoundedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		B5287042202A5C6700E78FB2 /* RoundedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
+		B5287044202A5DEE00E78FB2 /* GestureTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureTest-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +110,13 @@
 				B5287012202A587200E78FB2 /* ViewController.h */,
 				B5287013202A587200E78FB2 /* ViewController.m */,
 				B5287015202A587200E78FB2 /* Main.storyboard */,
+				B5287041202A5C6700E78FB2 /* RoundedView.h */,
+				B5287042202A5C6700E78FB2 /* RoundedView.m */,
 				B5287018202A587200E78FB2 /* Assets.xcassets */,
 				B528701A202A587200E78FB2 /* LaunchScreen.storyboard */,
 				B528701D202A587200E78FB2 /* Info.plist */,
 				B528701E202A587200E78FB2 /* main.m */,
+				B5287044202A5DEE00E78FB2 /* GestureTest-Bridging-Header.h */,
 			);
 			path = GestureTest;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 				TargetAttributes = {
 					B528700B202A587200E78FB2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					B5287023202A587200E78FB2 = {
@@ -265,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5287043202A5C6700E78FB2 /* RoundedView.m in Sources */,
 				B5287014202A587200E78FB2 /* ViewController.m in Sources */,
 				B528701F202A587200E78FB2 /* main.m in Sources */,
 				B5287011202A587200E78FB2 /* AppDelegate.m in Sources */,
@@ -430,12 +439,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZV9JB2U7V;
 				INFOPLIST_FILE = GestureTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = punya.GestureTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GestureTest/GestureTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,12 +457,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZV9JB2U7V;
 				INFOPLIST_FILE = GestureTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = punya.GestureTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GestureTest/GestureTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

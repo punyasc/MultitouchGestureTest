@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbY-el-Nic" customClass="RoundedView">
+                                <rect key="frame" x="87" y="306" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.6470588235294118" green="0.56470588235294117" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LG2-E0-lTP"/>
+                                    <constraint firstAttribute="width" constant="200" id="kS4-j1-jcc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="raX-Ue-5gH" appends="YES" id="p9V-XK-nw0"/>
+                                    <outletCollection property="gestureRecognizers" destination="MXV-dq-xkE" appends="YES" id="Lc5-Gk-vHh"/>
+                                    <outletCollection property="gestureRecognizers" destination="05B-JJ-JUr" appends="YES" id="MRU-tp-vc0"/>
+                                </connections>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-om-CpL">
+                                <rect key="frame" x="30" y="698" width="315" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gsM-XZ-Ykw"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Plain"/>
+                                    <segment title="R+Pan"/>
+                                    <segment title="R+Pinch"/>
+                                    <segment title="Pan+Pin"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="o9e-HE-N6C"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPP-Z2-YQ7">
+                                <rect key="frame" x="155.33333333333334" y="94" width="64.333333333333343" height="34.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pbY-el-Nic" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="25j-Od-UnN"/>
+                            <constraint firstItem="hPP-Z2-YQ7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7II-mn-suV"/>
+                            <constraint firstItem="QiW-om-CpL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="L5E-zu-Eh2"/>
+                            <constraint firstItem="hPP-Z2-YQ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fc4-Dl-q89"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QiW-om-CpL" secondAttribute="bottom" constant="40" id="lZe-2v-e9F"/>
+                            <constraint firstItem="pbY-el-Nic" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tPy-GJ-Pss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QiW-om-CpL" secondAttribute="trailing" constant="30" id="ylH-6m-yCF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="panRecognizer" destination="05B-JJ-JUr" id="qUj-zs-qHw"/>
+                        <outlet property="pinchRecognizer" destination="raX-Ue-5gH" id="ojl-qV-Dgg"/>
+                        <outlet property="rotationRecognizer" destination="MXV-dq-xkE" id="SR5-mR-zuf"/>
+                        <outlet property="segmentedControl" destination="QiW-om-CpL" id="kSo-PS-F5o"/>
+                        <outlet property="titleLabel" destination="hPP-Z2-YQ7" id="SK4-HC-aLR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="raX-Ue-5gH">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="0DG-Fo-uGl"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="wIS-Bg-UoH"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="MXV-dq-xkE">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="hd4-mA-tMY"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="0hj-Vo-F4a"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="05B-JJ-JUr">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="hPg-Pl-pBX"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="OSF-zr-sCs"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.64705882349999999" green="0.56470588239999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
